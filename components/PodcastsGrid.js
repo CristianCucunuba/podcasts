@@ -1,22 +1,15 @@
-import Link from "next/link";
+import AudioClip from "./AudioClip";
+
 const Podcasts = ({ audioClips }) => {
     return (
-        <div>
+        <div className="podcasts-container">
             <h2>Ultimos PodCasts</h2>
-            {audioClips.map((clip, index) => (
-                <Link href={`/podcast?id=${clip.id}`}>
-                    <a key={index}>{clip.title}</a>
-                </Link>
-            ))}
-            <style jsx global>
-                {`
-                    body {
-                        margin: 0;
-                        background: white;
-                        font-family: system-ui;
-                    }
-                `}
-            </style>
+            <div className="grid-podcasts">
+                {audioClips.map((clip, index) => (
+                    <AudioClip index={index} clip={clip} />
+                ))}
+
+            </div>
         </div>
     );
 };

@@ -13,23 +13,29 @@ const ChannelHero = ({ channel }) => {
                 {`
                     .channel-hero {
                         width: 100%;
-                        height: 300px;
+                        height: 400px;
                         background-repeat: no-repeat;
                         background-size: cover;
                     }
                     .overlay {
                         display: flex;
                         justify-content: center;
-                        align-items: flex-end;
+                        align-items: center;
                         width: 100%;
                         height: 100%;
                         background-color: rgba(0, 29, 74, .5);
                     }
                     .channel-title {
-                        padding: 10px;
-                        background-color: rgba(0,0,0,.75);
+                        font-size: 50px;
+                        padding: 30px 60px;
                         color: white;
                         border-radius: 5px;
+                        text-shadow: 1px 1px #fe4902, 
+                                    2px 2px #fe4902,
+                                    3px 3px #fe4902,
+                                    4px 4px #fe4902,
+                                    5px 5px #fe4902,
+                                    6px 6px #fe4902;
                     }
                 `}
             </style>

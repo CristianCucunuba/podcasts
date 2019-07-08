@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Layout from "../components/Layout";
 import SeriesGrid from "../components/SeriesGrid";
 import Podcasts from "../components/PodcastsGrid";
@@ -6,9 +5,21 @@ import ChannelHero from "../components/ChannelHero";
 const Channel = ({ channel, audioClips, series }) => {
     return (
         <Layout title={channel.title}>
-            <ChannelHero channel={channel}/>
-            <SeriesGrid series={series} />
-            <Podcasts audioClips={audioClips} />
+            <ChannelHero channel={channel} />
+            <div className="container">
+                <Podcasts audioClips={audioClips} />
+                {series.length > 0 && <SeriesGrid series={series} />}
+            </div>
+            <style jsx> {`
+                .container {
+                    background-color: #f5f5f5;
+                    padding: 10px 70px;
+                    display: grid;
+                    grid-template-columns: minmax(350px, 800px) auto;
+                    grid-gap: 20px;
+                }
+            `}
+            </style>
         </Layout>
     );
 };
@@ -26,7 +37,7 @@ Channel.getInitialProps = async ({ query }) => {
     const dataAudios = await reqAudios.json();
     const audioClips = dataAudios.body.audio_clips;
 
-    const dataSeries = await reqSeries.json();
+    const dataSeries = await reqSeries.json()
     const series = dataSeries.body.channels;
 
     return { channel, audioClips, series };
