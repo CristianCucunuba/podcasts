@@ -22,7 +22,7 @@ export default class Layout extends React.Component {
                     {`
                         header {
                             color: #fff;
-                            background: #001D4A;
+                            background: #1c0e4a;
                             padding: 15px;
                             text-align: center;
                         }
