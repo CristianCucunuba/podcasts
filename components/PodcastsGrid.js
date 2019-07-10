@@ -6,7 +6,7 @@ const Podcasts = ({ audioClips }) => {
             <h2>Ultimos PodCasts</h2>
             <div className="grid-podcasts">
                 {audioClips.map((clip, index) => (
-                    <AudioClip index={index} clip={clip} />
+                    <AudioClip key={index} clip={clip} />
                 ))}
 
             </div>
