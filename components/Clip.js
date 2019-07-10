@@ -43,7 +43,7 @@ const Clip = ({ clip }) => {
                         display: flex;
                         height: 100%;
                         flex-direction: column;
-                        background: #8756ca;
+                        background: #1c0e4a;
                         color: white;
                     }
                     picture {

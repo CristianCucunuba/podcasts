@@ -30,12 +30,12 @@ const ChannelHero = ({ channel }) => {
                         padding: 30px 60px;
                         color: white;
                         border-radius: 5px;
-                        text-shadow: 1px 1px #fe4902, 
-                                    2px 2px #fe4902,
-                                    3px 3px #fe4902,
-                                    4px 4px #fe4902,
-                                    5px 5px #fe4902,
-                                    6px 6px #fe4902;
+                        text-shadow: 1px 1px #1c0e4a, 
+                                     2px 2px #1c0e4a,
+                                     3px 3px #1c0e4a,
+                                     4px 4px #1c0e4a,
+                                     5px 5px #1c0e4a,
+                                     6px 6px #1c0e4a;
                     }
                 `}
             </style>
